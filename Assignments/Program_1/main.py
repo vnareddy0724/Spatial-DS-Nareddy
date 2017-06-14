@@ -1,4 +1,4 @@
-```py
+
 /**
 * @ProgramName: Program-1
 * @Author: Vahini Nareddy 
@@ -499,4 +499,3 @@ if __name__ == '__main__':
 				gd.printpoly(event.pos)
 				
 			pygame.display.flip()
-```
