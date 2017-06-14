@@ -1,3 +1,4 @@
+```py
 import json
 import os,sys
 import pygame
@@ -489,3 +490,4 @@ if __name__ == '__main__':
 				gd.printpoly(event.pos)
 				
 			pygame.display.flip()
+```
