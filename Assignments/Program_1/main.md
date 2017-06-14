@@ -1,4 +1,13 @@
 ```py
+/**
+* @ProgramName: Program-1
+* @Author: Vahini Nareddy 
+* @Description: 
+*     This program highlights the country border and rectangle around the country in which user clicks and also prints the respective country name on the screen.
+* @Course: 4553 Spatial DataStructure
+* @Semester: Summer 1
+* @Date: 14 06 2017
+*/
 import json
 import os,sys
 import pygame
