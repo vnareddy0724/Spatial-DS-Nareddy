@@ -1,4 +1,3 @@
-
 import json
 import os,sys
 import pygame
@@ -273,6 +272,14 @@ class DrawGeoJson(object):
 		self.__update_bounds()
 
 	def printpoly(self,pos):
+		"""
+		Add BORDER and RECTANGLE around the country and displays respective country NAME
+		Args:
+		pos (tuple): position where it is clicked
+		Returns:
+		None
+		"""
+
 		black = (0,0,0)
 		red = (255,0,0)
 		white = (255,255,255)
@@ -280,7 +287,7 @@ class DrawGeoJson(object):
 		lats=[]
 		totalinfo=[]
 		allpolygons=[]
-	
+
 		for poly in self.polygons:
 			adjusted = []
 			for p in poly:
@@ -289,7 +296,7 @@ class DrawGeoJson(object):
 				
 			result=self.point_inside_polygon(pos[0],pos[1],adjusted)
 			print(result)
-			
+
 			if result == True:
 				for i in adjusted:
 					lons.append(i[0])
@@ -320,8 +327,8 @@ class DrawGeoJson(object):
 								screen.blit(label, (671, 96))
 			else:
 				del adjusted[:]
-			
-			
+
+
 	def point_inside_polygon(self,x,y,poly):
     
 		n = len(poly)
