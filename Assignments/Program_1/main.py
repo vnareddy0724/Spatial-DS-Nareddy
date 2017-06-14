@@ -1,5 +1,5 @@
 
-/**
+
 * @ProgramName: Program-1
 * @Author: Vahini Nareddy 
 * @Description: 
@@ -7,7 +7,7 @@
 * @Course: 4553 Spatial DataStructure
 * @Semester: Summer 1
 * @Date: 14 06 2017
-*/
+
 import json
 import os,sys
 import pygame
