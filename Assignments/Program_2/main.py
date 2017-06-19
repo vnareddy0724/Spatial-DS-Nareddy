@@ -1,4 +1,4 @@
-```py
+
 """
 Program:
 --------
@@ -315,4 +315,4 @@ while running:
 			mbrs = calculate_mbrs(points, epsilon, min_pts)
 	'''		
 	pygame.display.flip()
-```
+
