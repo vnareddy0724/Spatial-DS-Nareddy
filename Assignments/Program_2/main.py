@@ -1,4 +1,3 @@
-
 """
 Program:
 --------
@@ -79,6 +78,8 @@ pygame.display.flip()
 epsilon = 20
 min_pts = 5
 
+#lists to store all files data
+
 keys1 = []
 crimes1= []
 keys2=[]
@@ -89,9 +90,15 @@ crimes2=[]
 crimes3=[]
 crimes4=[]
 crimes5=[]
+#Source Path
+
 DIRPATH = os.path.dirname(os.path.realpath(__file__))
 got_keys = False
+
 #with open(DIRPATH+'/../NYPD_CrimeData/Nypd_Crime_01') as f:
+
+#Opens files and store required data into lits.
+
 with open(DIRPATH+'/filtered_crimes_manhattan.csv') as f:
     for line in f:
         line = ''.join(x if i % 2 == 0 else x.replace(',', ':') for i, x in enumerate(line.split('"')))
@@ -103,6 +110,7 @@ with open(DIRPATH+'/filtered_crimes_manhattan.csv') as f:
             continue
         crimes1.append(line)
 got_keys = False		
+
 with open(DIRPATH+'/filtered_crimes_queens.csv') as f:
     for line in f:
         line = ''.join(x if i % 2 == 0 else x.replace(',', ':') for i, x in enumerate(line.split('"')))
@@ -113,7 +121,8 @@ with open(DIRPATH+'/filtered_crimes_queens.csv') as f:
             got_keys = True
             continue
         crimes2.append(line)		
-got_keys = False		
+got_keys = False	
+	
 with open(DIRPATH+'/filtered_crimes_staten_island.csv') as f:
     for line in f:
         line = ''.join(x if i % 2 == 0 else x.replace(',', ':') for i, x in enumerate(line.split('"')))
@@ -125,6 +134,7 @@ with open(DIRPATH+'/filtered_crimes_staten_island.csv') as f:
             continue
         crimes3.append(line)		
 got_keys = False
+
 with open(DIRPATH+'/filtered_crimes_bronx.csv') as f:
     for line in f:
         line = ''.join(x if i % 2 == 0 else x.replace(',', ':') for i, x in enumerate(line.split('"')))
@@ -136,6 +146,7 @@ with open(DIRPATH+'/filtered_crimes_bronx.csv') as f:
             continue
         crimes4.append(line)	
 got_keys = False
+
 with open(DIRPATH+'/filtered_crimes_brooklyn.csv') as f:
     for line in f:
         line = ''.join(x if i % 2 == 0 else x.replace(',', ':') for i, x in enumerate(line.split('"')))
@@ -146,6 +157,8 @@ with open(DIRPATH+'/filtered_crimes_brooklyn.csv') as f:
             got_keys = True
             continue
         crimes5.append(line)		
+		
+#Lists to store feature scaling data
 		
 crimecoords1 = []		
 crimecoords2 = []		
@@ -201,7 +214,7 @@ for crime in crimes5:
 		
 
 		
-
+#Applying scaling formula based on screen width and height.
 		
 num_points = 500
 
@@ -271,10 +284,10 @@ count=0
 
 while running:
 	pygame.init() 
-	myfont = pygame.font.SysFont("Ariel", 40)
+	myfont = pygame.font.SysFont("Ariel", 30)
 	label = myfont.render("Program2", 1, (0,0,255))
 	screen.blit(label, (0, 0))
-	myfont = pygame.font.SysFont("Ariel", 40)
+	myfont = pygame.font.SysFont("Ariel", 30)
 	label = myfont.render("Vahini Nareddy", 1, (0,0,255))
 	screen.blit(label, (0, 25))
 	for p in points1:
