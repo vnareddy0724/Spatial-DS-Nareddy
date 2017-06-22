@@ -1,8 +1,6 @@
-
 import pygame
 import sys,os
 import json
-
 
 def clean_area(screen,origin,width,height,color):
     """
@@ -14,6 +12,7 @@ def clean_area(screen,origin,width,height,color):
     pygame.draw.polygon(screen, color, points, 0)
 
 if __name__=='__main__':
+	DIRPATH = os.path.dirname(os.path.realpath(__file__))
 
 	background_colour = (255,255,255)
 	black = (0,0,0)
@@ -23,7 +22,7 @@ if __name__=='__main__':
 	pygame.display.set_caption('MBRs')
 	screen.fill(background_colour)
 	pygame.init()
-	bg = pygame.image.load("./image.png")
+	bg = pygame.image.load(DIRPATH+'/image.png')
 
 	# Put this in your game loop:
 	screen.blit(bg, (0, 0))
@@ -66,7 +65,7 @@ if __name__=='__main__':
 			points=[]
 			values=[]
 		screen.blit(bg, (0, 0))
-		f = open('quake-'+str(count)+'-adjusted.json','r')
+		f = open(DIRPATH+'quake-'+str(count)+'-adjusted.json','r')
 		points = json.loads(f.read())
 		for j in points:
 			values.append((j[0],j[1]))
