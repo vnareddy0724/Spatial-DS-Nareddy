@@ -1,4 +1,4 @@
-```py
+
 """
 Program:
 --------
@@ -96,4 +96,4 @@ if __name__=='__main__':
 		pygame.time.wait(10)	
 		
 
-```
+
