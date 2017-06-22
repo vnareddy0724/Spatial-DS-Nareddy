@@ -2,7 +2,7 @@
 import pygame
 import sys,os
 import json
-from dbscan import *
+
 
 def clean_area(screen,origin,width,height,color):
     """
@@ -12,43 +12,7 @@ def clean_area(screen,origin,width,height,color):
     ox,oy = origin
     points = [(ox,oy),(ox+width,oy),(ox+width,oy+height),(ox,oy+height),(ox,oy)]
     pygame.draw.polygon(screen, color, points, 0)
-def calculate_mbrs(points, epsilon, min_pts,debug=False):
-    """
-    Find clusters using DBscan and then create a list of bounding rectangles
-    to return.
-    """
-    mbrs = {}
-    clusters =  dbscan(points, epsilon, min_pts,distance=euclidean,debug=debug)
-    extremes = {'max_x':sys.maxint * -1,'max_y':sys.maxint*-1,'min_x':sys.maxint,'min_y':sys.maxint}
 
-    """
-    Traditional dictionary iteration to populate mbr list
-    Does same as below
-    """
-    for id,cpoints in clusters.items():
-        print(id)
-        xs = []
-        ys = []
-        for p in cpoints:
-            xs.append(p[0])
-            ys.append(p[1])
-        max_x = max(xs) 
-        max_y = max(ys)
-        min_x = min(xs)
-        min_y = min(ys)
-
-        if max_x > extremes['max_x']:
-            extremes['max_x'] = max_x
-        if max_y > extremes['max_y']:
-            extremes['max_y'] = max_y
-        if min_x < extremes['min_x']:
-            extremes['min_x'] = min_x
-        if min_y < extremes['min_y']:
-            extremes['min_y'] = min_y
-
-        mbrs[id]=[(min_x,min_y),(max_x,min_y),(max_x,max_y),(min_x,max_y),(min_x,min_y)]
-    mbrs['extremes'] = extremes
-    return mbrs
 if __name__=='__main__':
 
 	background_colour = (255,255,255)
