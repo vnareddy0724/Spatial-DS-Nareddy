@@ -1,4 +1,14 @@
 ```py
+"""
+Program:
+--------
+    Program 2 - Drawearthquake
+Description:
+------------
+    This program plots points of earthquake data from 1960 - 2017
+Name: Vahini Nareddy
+Date: 06 22 2017
+"""
 import pygame
 import sys,os
 import json
