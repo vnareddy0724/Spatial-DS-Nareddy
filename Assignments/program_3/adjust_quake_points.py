@@ -2,7 +2,7 @@
 import math
 import json
 import sys
-
+import os
 def mercX(lon):
     """
     Mercator projection from longitude to X coord
@@ -56,7 +56,7 @@ def adjust_location_coords(extremes,points,width,height):
 
 if __name__=='__main__':
 
-    DIRPATH = os.path.dirname(os.path.realpath(__file__))
+	DIRPATH = os.path.dirname(os.path.realpath(__file__))
 	years = [x for x in range(1960,2017)]
 	count=1960
 	allx = []
