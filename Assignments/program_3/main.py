@@ -65,7 +65,7 @@ if __name__=='__main__':
 			points=[]
 			values=[]
 		screen.blit(bg, (0, 0))
-		f = open(DIRPATH+'quake-'+str(count)+'-adjusted.json','r')
+		f = open(DIRPATH+'/quake-'+str(count)+'-adjusted.json','r')
 		points = json.loads(f.read())
 		for j in points:
 			values.append((j[0],j[1]))
