@@ -3,7 +3,7 @@ import requests
 import json
 import sys
 import glob
-
+import os
 """
 This class helps read the NYC crime data.
 Usage:
