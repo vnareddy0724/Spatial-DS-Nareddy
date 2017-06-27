@@ -13,7 +13,7 @@ Date: 06 19 2017
  
 import pygame
 import random
-from dbscan import *
+
 import sys,os
 import pprint as pp
 
