@@ -5,7 +5,7 @@ import json
 import collections
 DIRPATH = os.path.dirname(os.path.realpath(__file__))
 
-f = open(DIRPATH+'./world_cities_large.json',"r")
+f = open(DIRPATH+'/world_data/world_cities_large.json',"r")
 
 data = f.read()
 
