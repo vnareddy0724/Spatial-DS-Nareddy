@@ -6,7 +6,7 @@ import collections
 
 DIRPATH = os.path.dirname(os.path.realpath(__file__))
 
-f = open(DIRPATH+'./airports.json',"r")
+f = open(DIRPATH+'/world_data/airports.json',"r")
 
 data = f.read()
 
