@@ -6,7 +6,7 @@ import collections
 
 DIRPATH = os.path.dirname(os.path.realpath(__file__))
 
-f = open(DIRPATH+'./state_borders.json',"r")
+f = open(DIRPATH+'/world_data/state_borders.json',"r")
 
 data = f.read()
 
