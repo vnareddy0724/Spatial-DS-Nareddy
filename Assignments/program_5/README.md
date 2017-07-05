@@ -16,11 +16,12 @@
 ## Example queries :
 
 ## Query1 : 
+      python query1.py DFW MNL 500	
       python query1.py MCZ MNL 500
       python query1.py DFW BOM 500
 
 
-## Query2 : 
+## Query2 : On mouseclick
       	 python query2.py volcanos altitude 4000 min 0 1000		  
 			
 	 python query2.py earthquakes magnitude 8 max 5 1000		  	
