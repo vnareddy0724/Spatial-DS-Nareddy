@@ -21,7 +21,7 @@
 
 
 ## Query2 : 
-      	python query2.py volcanos altitude 4000 min 0 1000		  
+      	 python query2.py volcanos altitude 4000 min 0 1000		  
 			
 	 python query2.py earthquakes magnitude 8 max 5 1000		  	
 
