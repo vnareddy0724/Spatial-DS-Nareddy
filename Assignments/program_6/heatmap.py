@@ -8,7 +8,7 @@ Description:
 ------------
     This program generates heat map based on terrorism attacks.
     
-Name: Vahini Nareddy
+Name: Vahini Nareddy , Sreeja Nagireddy
 Date: 07 July 2017
 """
 
